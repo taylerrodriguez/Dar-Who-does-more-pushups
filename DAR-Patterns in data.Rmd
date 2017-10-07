@@ -45,7 +45,7 @@ The T-Test will be used to determine whether the means of two groups, such as po
 
 # Results
 <!--You have both graphical and numerical methods, so you will have both graphical and numerical results to consider.!-->
-
+We found that skill players did more pushups than line players. For the graphical results we ran a Side-by-Side Histogram, which told us the number of pushups each player completed by dividing them in to two parts, line and skill. We found that skill players had the most amount of pushups, and the most players. For the numberical graph we ran a two way table that determind the mean, max, and median. 
 
 ## Graphical Results
 <!--Your graph should have a good title, and axes should be labled as needed.  Discuss your graphical results, showing how they answer the research question.  Use specific features of the graph in your discussion.!-->
@@ -64,7 +64,7 @@ In the Side-by-Side Histogram above, we divded the graph into two parts one for 
 ## Numerical Results
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
-Here is a two-way table of that gives types of pushups, broken down by position preference:
+
 
 ```{r echo=FALSE}
 favstats(pushups~position,data=pushups)
