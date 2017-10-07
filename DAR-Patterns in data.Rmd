@@ -65,19 +65,11 @@ In the Side-by-Side Histogram above, we divded the graph into two parts one for 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 Here is a two-way table of that gives types of pushups, broken down by position preference:
-fabvstats
-```{r echo=FALSE}
-positionMajor <- xtabs(~position+weight,data=pushups)
-positionMajor
-```
-
-The position groups are not all the same, so we need to correct for that by computing some row percentages:
 
 ```{r echo=FALSE}
-rowPerc(positionMajor)
+favstats(pushups~position,data=pushups)
 ```
-
-In the data, it seems the lower weight effects the skill position more than the line position, however when the weight is higher the line position does more pushups than the skill.
+We noticed in the two-way table above that the skill players maximum amount of pushups was 108, while the line players had a maximum of 34. As a result the mean of skilled players was 49.72 which resulted in skilled players doing more pushups.
 
 
 # Inferential Results
@@ -91,7 +83,7 @@ $H_0$:  There is no relationship between weight and pushup position in the pushu
 $H_a$: There IS a relationship between weight and pushup position in the pushup data.
 
 ```{r echo=FALSE}
-chisqtestGC(positionMajor)
+
 ```
 
 
