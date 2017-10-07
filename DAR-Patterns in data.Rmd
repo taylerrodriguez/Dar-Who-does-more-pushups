@@ -1,7 +1,7 @@
 ---
 title: "Who does more pushups"
-author: "your name"
-date: "March 8"
+author: "Tayler Rodriguez"
+date: "October 3"
 output: html_document
 ---
 
@@ -29,15 +29,20 @@ Line players are on the offensive or defensive line.  They need to be a certain 
 Our Research Question is:
 
   >Who does more pushups, on average: a line player or a skill player?
-
+Skill players did more push ups. 
 
 # Methods
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+The two variables involved are:
 
+* **position**, which is a factor variable with two values ("line" and "skill");
+* **weight**, which is also a factor variable 
+In this study we'll think of **weight** explanatory variable and **position** as the response: although we don't really believe that weight will explain the position of your pushups, we might wish to use weight to predict their position of pushups.
 
+Our variable analysis has shown us that we are interested on the relationship between two factor variables. Hence we will make bar charts to examine the data graphically, and two-way tables with some row percentages to detect and describe any patterns we find in the data.
 
-
+We will also want to see if any relationship that we find in the data between pushups and other factors might also be present in the push up data when drawn. That's the inferential question, and to investigate an inferential question about the relationship between two factor variables in the chi-square test is appropriate.
 
 # Results
 <!--You have both graphical and numerical methods, so you will have both graphical and numerical results to consider.!-->
@@ -46,15 +51,50 @@ Our Research Question is:
 ## Graphical Results
 <!--Your graph should have a good title, and axes should be labled as needed.  Discuss your graphical results, showing how they answer the research question.  Use specific features of the graph in your discussion.!-->
 
+Wen can view the pushups by positions graphically as well, in the following bar-chart:
+
+```{r echo=FALSE}
+
+```
+
+
 
 ## Numerical Results
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+Here is a two-way table of that gives types of pushups, broken down by position preference:
+
+```{r echo=FALSE}
+positionMajor <- xtabs(~position+weight,data=pushups)
+positionMajor
+```
+
+The position groups are not all the same, so we need to correct for that by computing some row percentages:
+
+```{r echo=FALSE}
+rowPerc(positionMajor)
+```
+
+In the data, it seems the lower weight effects the skill position more than the line position, however when the weight is higher the line position does more pushups than the skill.
 
 
 # Inferential Results
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+Of course we are only looking at a sample of players. The difference in row percentages that we pointed out earlier could be due to chance variation in who got into the sample, rather than to a greater preference for skill and line players. We preform a chi-square test.
+
+$H_0$:  There is no relationship between weight and pushup position in the pushup data.
+
+$H_a$: There IS a relationship between weight and pushup position in the pushup data.
+
+```{r echo=FALSE}
+chisqtestGC(positionMajor)
+```
+
 
 # Discussion and Conclusion
 <!--State your overall conclusion.  This is also a good place to mention other Research Questions that came to mind as you were carrying out this study.!-->
+
+It doesn't seem like knowing the weight of the player could lead you to the position of the player, however knowing the position of the play could predict the number of pushups the player could do. 
+
 
