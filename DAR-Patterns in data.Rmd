@@ -40,12 +40,12 @@ The two variables involved are:
 * **pushups**, which is also a numerical variable 
 In this study we'll determine how a players **position** affects a players the amount of **pushups** a player can do.
 
-For this experiment we will be determinig the results by using a T-Test.
-The T-Test will be used to determine whether the means of two groups, such as position and pushups, are equal to each other. The assumption for the test is that both groups are sampled from normal distruputions with equal variances.
+For this experiment we will be determining the results by using a T-Test.
+The T-Test will be used to determine whether the means of two groups, such as position and pushups, are equal to each other. The assumption for the test is that both groups are sampled from normal distributions with equal variances.
 
 # Results
 <!--You have both graphical and numerical methods, so you will have both graphical and numerical results to consider.!-->
-We found that skill players did more pushups than line players. For the graphical results we ran a Side-by-Side Histogram, which told us the number of pushups each player completed by dividing them in to two parts, line and skill. We found that skill players had the most amount of pushups, and the most players. For the numberical graph we ran a two way table that determind the mean, max, and median. 
+We found that skill players did more pushups than line players. For the graphical results we ran a Side-by-Side Histogram, which told us the number of pushups each player completed by dividing them in to two parts, line and skill. We found that skill players had the most amount of pushups, and the most players. For the numerical graph we ran a two way table that determined the mean, max, and median. 
 
 ## Graphical Results
 <!--Your graph should have a good title, and axes should be labled as needed.  Discuss your graphical results, showing how they answer the research question.  Use specific features of the graph in your discussion.!-->
@@ -59,7 +59,7 @@ histogram(~pushups|position,data=pushups,
           xlab="Number of Pushups")
 ```
 
-In the Side-by-Side Histogram above, we divded the graph into two parts one for skill and one for line. The side labeled "count" represents the number of players in each position. The numbers labeled "number of pushups", represents the amount of pushups each player was able to do. Our numbers are exceeding by twenty. 
+In the Side-by-Side Histogram above, we divided the graph into two parts one for skill and one for line. The side labeled "count" represents the number of players in each position. The numbers labeled "number of pushups", represents the amount of pushups each player was able to do. Our numbers are exceeding by twenty. 
 
 ## Numerical Results
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -88,6 +88,4 @@ $H_a$: There IS a relationship between position and pushups in the pushup data.
 # Discussion and Conclusion
 <!--State your overall conclusion.  This is also a good place to mention other Research Questions that came to mind as you were carrying out this study.!-->
 
-
-
-
+Overall I concluded that skill players did more pushups than line players. While running this experiment I wondered why line players had a significant difference in data compared to that of skill players. After running a Side-by-Side Histogram, I was able to observe the difference in the skill players. The data was significantly different because there were more skilled players. The Side-by-Side Historgram also showed the difference in the amount of pushups, the result clearly showed the skill players completed more pushups.In the Two-way table I was able to compare the mean of both positions. The mean showed a clear difference , the skill players had a mean of 47.5, while the line players had a total mean of 17.12. It was clear that skill players completed more pushups. Skill players had a max of 108 pushups while line players had a max of 34. Our alternative hypothesis was that there was a relationship between position and pushups and our results are able to confirm that.
